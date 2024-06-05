@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>이거 어디다가 버려요?</title>
+
+	<style type="text/css">
+
+		/*폰트*/
+			@font-face {
+		    font-family: 'Pretendard-ExtraBold';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
+		    font-weight: 800;
+		    font-style: normal;}
+			@font-face {
+		    font-family: 'Pretendard-Bold';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+		    font-weight: 700;
+		    font-style: normal;}
+			@font-face {
+		    font-family: 'Pretendard-Regular';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+		    font-weight: 400;
+		    font-style: normal;}
+		    @font-face {
+		    font-family: 'Pretendard-Light';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+		    font-weight: 300;
+		    font-style: normal;}
+
+		html{font-family: Pretendard-Regular; font-style: 'normal;'; fo word-break: keep-all; display: block; background: white; scroll-behavior: smooth; font-size: 16px;}
+		body{overflow-x: hidden; display: block;}
+		body,h1,h2,h3,h4,h5,p,ul,ol,header,block{margin: 0; padding: 0;}
+    /* 기본 글자 크기 */
+    body {font-size: 16px;}
+
+    /* 네비게이션 스타일 */
+    nav {overflow-x: auto; padding: 30px 0px; background: black;}
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        background-color: black;}
+
+    nav ul li {
+        margin: 0;
+      	flex: 0 0 auto;}
+
+    nav ul li a {
+    		font-size: 1rem;
+        color: #8DE747;
+        text-decoration: none;
+        padding: 10px 20px;
+     		white-space: nowrap;}
+
+    h1 {font-size: 13rem; word-break: keep-all; text-align: center; font-family: Pretendard-ExtraBold;
+    	margin-top: 50px; margin-bottom: 50px;}
+
+/* 네모 칸 스타일 */
+    .container {
+        display: flex;}
+
+    .box1 {
+        flex: 1; /* 동일한 너비의 네모 칸 */
+        background: #8DE747;
+        padding: 5px;
+        border: 1px solid black;
+        text-align: center;
+        font-family: Pretendard-Bold;
+        font-size: 1.6rem;
+        margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 10px;
+        border-left: none;}
+    .box2 {
+        flex: 1; /* 동일한 너비의 네모 칸 */
+        background: #8DE747;
+        padding: 5px;
+        border: 1px solid black;
+        text-align: center;
+        font-family: Pretendard-Bold;
+        font-size: 1.6rem;
+        margin-left: 20px; margin-top: 0px; margin-bottom: 0px; margin-right: 20px;}
+    .box3 {
+        flex: 1; /* 동일한 너비의 네모 칸 */
+        background: #8DE747;
+        padding: 5px;
+        border: 1px solid black;
+        text-align: center;
+        font-family: Pretendard-Bold;
+        font-size: 1.6rem;
+        margin-left: 30px; margin-top: 0px; margin-bottom: 0px; margin-right: 30px;}
+    .box4 {
+        flex: 1; /* 동일한 너비의 네모 칸 */
+        background: #8DE747;
+        padding: 5px;
+        border: 1px solid black;
+        text-align: center;
+        font-family: Pretendard-Bold;
+        font-size: 1.6rem;
+        margin-left: 10px; margin-top: 0px; margin-bottom: 0px; margin-right: 0px;
+        border-right: none;}
+
+
+/* 본문 section 스타일 */
+        section {display: flex;
+            	height: 500px; /* 필요에 따라 높이 조정 */}
+
+        .left {flex: 1;
+            	background-color: white; flex-direction: column;/* 흰색 배경 */}
+
+        .right {flex: 1;
+            		background-color: #8DE747; /* 초록색 배경 */}
+
+        .top {
+            flex: 1;
+            background-color: black;
+            color: white; /* 텍스트 색상 흰색 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Pretendard-Bold;
+            font-size: 2rem;
+            padding-top: 100px;
+        }
+
+        .bottom {
+            flex: 1;
+            background-color: white;
+            color: black; /* 텍스트 색상 검정 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Pretendard-Regular;
+            font-size: 2rem;
+        }
+
+
+
+
+
+/* 700px 이하일 때 아이템 크기 및 높이 조정 */
+    @media (max-width: 700px) {
+        nav ul {
+        		justify-content: flex-start;
+           }
+        nav ul li {
+            margin: 5px 0;}
+        h1 { margin-top: 50px; margin-bottom: 20px;
+        		font-size: 6.5rem; text-align: left; line-height: 7rem;}
+        .container {
+            flex-direction: column;}
+        .box1 {
+		        flex: 1; /* 동일한 너비의 네모 칸 */
+		        background: #8DE747;
+		        padding: 5px;
+		        border: 1px solid black;
+		        text-align: left;
+		        font-family: Pretendard-Bold;
+		        font-size: 1.2rem;
+		        margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 75px;
+		        border-left: none;}
+		    .box2 {
+		        flex: 1; /* 동일한 너비의 네모 칸 */
+		        background: #8DE747;
+		        padding: 5px;
+		        border: 1px solid black;
+		        text-align: left;
+		        font-size: 1.2rem;
+		        margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 140px;
+		      	border-left: none; border-bottom: none; border-top: none;}
+		    .box3 {
+		        flex: 1; /* 동일한 너비의 네모 칸 */
+		        background: #8DE747;
+		        padding: 5px;
+		        border: 1px solid black;
+		        text-align: left;
+		        font-size: 1.2rem;
+		        margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 100px;
+		      	border-left: none;}
+        .box4 {
+		        flex: 1; /* 동일한 너비의 네모 칸 */
+		        background: #8DE747;
+		        padding: 5px;
+		        border: 1px solid black;
+		        text-align: left;
+		        font-size: 1.2rem;
+		        margin-left: 0px; margin-top: 0px; margin-bottom: 0px; margin-right: 110px;
+		      	border-left: none; border-top: none;}
+
+
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>이거 어디다가 버려요?</h1>
+    <div class="container">
+    <div class="box1">쓰레기마다 다양한 분리수거 방법이 있어요</div>
+    <div class="box2">분리수거 할 때마다 버벅대는 당신!</div>
+    <div class="box3">분리수거 할 때마다 검색창을 켜는 당신!</div>
+    <div class="box4">그런 당신을 위해 한꺼번에 모았습니다</div>
+		</div>
+<section>
+		<div class="white"></div>
+</section>
+<section>
+    <div class="left">
+    	  <div class="top">상단 텍스트</div>
+        <div class="bottom">하단 텍스트</div>
+    </div>
+    <div class="right"></div>
+</section>
+
+</body>
+</html>
